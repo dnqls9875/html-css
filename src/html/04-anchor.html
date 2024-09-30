@@ -11,13 +11,24 @@
     <h1 id="heading">하이퍼링크 요소</h1>
     <!-- 웹사이트(URL)로 하이퍼링크 연결 : 절대경로-->
     <!-- 기본 속성 target="_self" -->
-    <a href="https://likelion.net/school">태킷 프론트엔드 스쿨 (부트캠프)</a>
+    <div>
+      <a href="https://likelion.net/school">태킷 프론트엔드 스쿨 (부트캠프)</a>
+    </div>
     <!-- target 속성의 값으로 _blank를 지정하면 새창, 새탭에 링크 결과 보기 -->
-    <a href="https://github.com/dnqls9875" target="_blank">우빈님의 Github</a><br />
+    <a href="https://github.com/dnqls9875" target="_blank"> <div>우빈님의 Github</div></a><br />
+
+    <p>
+      <a href="https://github.com/dnqls9875/homework"
+        >과제 저장소 - <a href="https://github.com/dnqls9875/homework/blob/main/about-me.md">자기소개</a></a
+      >
+    </p>
+
     <!-- title 전역 속성이지만 a 태그와 가장 궁합이 잘 맞는다. -->
     <!-- 접근성 관점에서 링크 적절한 타이틀을 입력하는게 좋다. -->
-    <a href="https://www.naver.com" target="_blank" title="네이버로 이동합니다.">네이버</a><br />
-    <a href="https://www.daum.net" target="_blank" title="다음으로 이동합니다.">다음</a><br />
+    <!-- target 속성의 값으로 _blank로 설정되어 있을 경우에는 rel 속성의 값으로 noopener noreferrer를 지정해야 함 -->
+    <a href="https://www.naver.com" target="_blank" title="네이버로 이동합니다." rel="noopener noreferrer">네이버</a
+    ><br />
+    <a href="https://www.daum.net" target="_blank" title="다음으로 이동합니다." rel="noopener noreferrer">다음</a><br />
 
     <!-- 이미지 링크 -->
     <!-- title은 보조적인 역할 주가 되면 안된다. -->
@@ -41,11 +52,7 @@
     <a href="./../../index.html">처음으로</a><br />
 
     <!-- 파일 다운로드 링크 -->
-    <a
-      href="./../assets/pdf/search-engine-optimization-starter-guide.pdf"
-      download="search-engine-optimization-starter-guide.pdf"
-      >구글 SEO 가이드</a
-    ><br />
+    <a href="./../assets/pdf/google-seo-guide-en.pdf" download="google-seo-guide-en.pdf">구글 SEO 가이드</a><br />
 
     <!-- 전화번호 또는 이메일 주소로 하이퍼 링크 -->
     <a href="mailto:dnqls3334@gmail.com?subject=문의사항">dnqls3334@gmail.com</a><br />
