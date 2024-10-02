@@ -9,6 +9,7 @@
     <h1>form 관련 요소</h1>
     <h2>input 요소</h2>
     <!-- action은 form 내부에 있는 양식을 전송할 때 전송할 위치 -->
+    <!-- lebel의 for값은 input의 id값과 동일하게 맞춰줘야 사용성, 접근성이 올라간다. -->
     <form action="/" method="">
       <fieldset>
         <legend>input 요소를 활용한 다양한 양식 만들기</legend>
@@ -34,18 +35,6 @@
         </p>
         <!-- 체크박스 서식 (checkbox) -->
         <p>
-          <input value="html" type="checkbox" name="techit-class" id="class-a" required />
-          <label for="class-a">회고 A팀</label>
-          <input type="checkbox" name="techit-class" id="class-b" required />
-          <label for="class-b">회고 B팀</label>
-        </p>
-        <!-- 라디오버튼 서식 (checkbox) -->
-        <p>
-          <input type="radio" name="likelion-class" id="class-1" required />
-          <label for="class-1">회고 1팀</label>
-          <input type="radio" name="likelion-class" id="class-2" required />
-          <label for="class-2">회고 2팀</label>
-
           <input value="html" type="radio" name="likelion-class" id="html" required />
           <label for="html">HTML</label>
           <input value="css" type="radio" name="likelion-class" id="css" required />
@@ -54,6 +43,13 @@
           <label for="js">Javascript</label>
           <input value="react" type="radio" name="likelion-class" id="react" required />
           <label for="react">React</label>
+        </p>
+        <!-- 라디오버튼 서식 (checkbox) -->
+        <p>
+          <input type="radio" name="techit-class" id="class-1" required />
+          <label for="class-1">회고 1팀</label>
+          <input type="radio" name="techit-class" id="class-2" required />
+          <label for="class-2">회고 2팀</label>
         </p>
 
         <!-- 버튼의 type값은 기본값이 submit이라 생략 가능하지만 명시하는편이 좋다. 이유는? 내가 알아볼 것 -->
