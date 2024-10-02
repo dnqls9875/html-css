@@ -35,6 +35,7 @@
         </p>
         <!-- 체크박스 서식 (checkbox) -->
         <p>
+          <!-- 명시적인 레이블링 방식 -->
           <input value="html" type="radio" name="likelion-class" id="html" required />
           <label for="html">HTML</label>
           <input value="css" type="radio" name="likelion-class" id="css" required />
@@ -43,6 +44,8 @@
           <label for="js">Javascript</label>
           <input value="react" type="radio" name="likelion-class" id="react" required />
           <label for="react">React</label>
+          <!-- 암묵적인 레이블링 방식 문법상 오류는 없지만 사용도 되지만 접근성에서 좋지가 않음. 스크린리더가 못읽어줌 -->
+          <label for="node"><input type="text" id="node" />node</label>
         </p>
         <!-- 라디오버튼 서식 (checkbox) -->
         <p>
