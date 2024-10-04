@@ -3,11 +3,21 @@
   color: orange;
 }
 
+body * {
+  color: violet;
+}
+
 /* Cascade 현상 */
 /* 겹침 현상 */
 /* css는 가장 마지막 밑에 작성한 css코드가 적용된다. */
 
 /* 요소 선택자 */
+html {
+  /* 기본 웹사이트 폰트 사이즈 16px * 0.625 = 10 */
+  /* 10px로 설정 */
+  font-size: 0.625em;
+}
+
 p {
   color: blue;
 }
@@ -25,4 +35,61 @@ p {
 /* 속성 선택자 */
 p[title] {
   color: pink;
+}
+
+/* 자손 결합 선택자 */
+p span {
+  color: skyblue;
+}
+
+/* 자식 선택자 */
+p > span {
+  text-decoration: underline;
+}
+
+/* 가상 요소 */
+/* 마크업에 존재하지 않았지만 css 가상으로 만들어낸 요소 */
+h1::before {
+  content: "첫번째 자식 요소";
+}
+
+h1::after {
+  content: "마지막 자식 요소";
+}
+
+p::first-letter {
+  font-size: 3.5rem;
+}
+
+::selection {
+  background-color: darkblue;
+  color: #fff;
+}
+
+/* 가상 클래스 */
+:root {
+  font-size: 0.75em;
+}
+/* 가상 클래스를 이용한 선택자 그룹화 */
+/* 반복되는게 있으면 is 사용 */
+:is(.heading, h1, h2, h3, h4, h5, h6) span {
+  background-color: salmon;
+  color: blue;
+}
+
+/* 선택자 그룹화 */
+h1 span,
+h2 span,
+h3 span,
+h4 span,
+h5 span,
+h6 span {
+  background-color: yellow;
+  color: #000;
+}
+
+/* where은 명시도 점수가 0점이기 때문에 겹치는 내용을 주석처리해야 보인다. */
+:where(h1, h2, h3, h4, h5, h6) span {
+  background-color: lightgreen;
+  color: red;
 }
