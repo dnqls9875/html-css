@@ -1,0 +1,28 @@
+/* 전체 선택자 */
+* {
+  color: orange;
+}
+
+/* Cascade 현상 */
+/* 겹침 현상 */
+/* css는 가장 마지막 밑에 작성한 css코드가 적용된다. */
+
+/* 요소 선택자 */
+p {
+  color: blue;
+}
+
+/* class 선택자 */
+.like-lion {
+  color: green;
+}
+
+/* id 선택자 */
+#techit {
+  color: red;
+}
+
+/* 속성 선택자 */
+p[title] {
+  color: pink;
+}
