@@ -70,12 +70,6 @@ p::first-letter {
 :root {
   font-size: 0.75em;
 }
-/* 가상 클래스를 이용한 선택자 그룹화 */
-/* 반복되는게 있으면 is 사용 */
-:is(.heading, h1, h2, h3, h4, h5, h6) span {
-  background-color: salmon;
-  color: blue;
-}
 
 /* 선택자 그룹화 */
 h1 span,
@@ -88,8 +82,25 @@ h6 span {
   color: #000;
 }
 
+/* 가상 클래스를 이용한 선택자 그룹화 */
+/* 반복되는게 있으면 is 사용 */
+:is(.heading, h1, h2, h3, h4, h5, h6) span {
+  background-color: salmon;
+  color: blue;
+}
+
 /* where은 명시도 점수가 0점이기 때문에 겹치는 내용을 주석처리해야 보인다. */
 :where(h1, h2, h3, h4, h5, h6) span {
   background-color: lightgreen;
   color: red;
+}
+
+h6:has(+ p) {
+  border: 1px solid green;
+  padding: 10px;
+}
+
+p:has(> strong) {
+  border: 1px solid red;
+  padding: 10px;
 }
