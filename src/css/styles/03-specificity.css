@@ -1,0 +1,43 @@
+body {
+  font-family: "Pretendard Variable", Pretendard, sans-serif;
+  margin: 20px;
+  padding: 50px;
+  border: 10px solid green;
+  color: darkblue;
+}
+
+/* 나중에 선언된 layer 명이 우선순위를 높게 가진다. */
+@layer Techit, Likilion;
+
+@layer Likelion {
+  p {
+    color: red;
+  }
+  h2 {
+    background-color: yellow;
+  }
+}
+@layer Techit {
+  p {
+    color: green;
+  }
+  h2 {
+    background-color: tomato;
+  }
+}
+
+/* h1 {
+  color: green;
+}
+
+p {
+  color: orange;
+}
+
+.like-lion {
+  color: gray;
+}
+
+#school {
+  color: red;
+} */
