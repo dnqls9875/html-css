@@ -7,19 +7,19 @@
 .visual {
   background-color: lightpink;
 }
-.main {
-  display: flow-root;
-  /* border: 1px solid currentColor; */
-  background-color: limegreen;
-  padding-inline: 15px;
-  box-sizing: border-box;
-}
 .slogan {
   clear: both;
   background-color: skyblue;
 }
 .footer {
   background-color: orange;
+}
+.main {
+  display: flow-root;
+  /* border: 1px solid currentColor; */
+  background-color: limegreen;
+  padding-inline: 15px;
+  box-sizing: border-box;
 }
 .group {
   /* height: 20vh; */
@@ -36,7 +36,6 @@
   inline-size: 250px;
 }
 .group2 {
-  float: left;
   float: inline-start;
   background-color: deeppink;
   height: 40vh;
@@ -45,7 +44,6 @@
   inline-size: 380px;
 }
 .group3 {
-  float: left;
   float: inline-start;
   background-color: darkseagreen;
   height: 60vh;
