@@ -1,0 +1,69 @@
+@import "./../../common/reset.css";
+
+/* 영역별 배경색상 지정 */
+.header {
+  background-color: yellow;
+}
+.visual {
+  background-color: lightpink;
+}
+.main {
+  display: flow-root;
+  /* border: 1px solid currentColor; */
+  background-color: limegreen;
+  padding-inline: 15px;
+  box-sizing: border-box;
+}
+.slogan {
+  clear: both;
+  background-color: skyblue;
+}
+.footer {
+  background-color: orange;
+}
+.group {
+  /* height: 20vh; */
+  color: #fff;
+  margin-inline: 15px;
+}
+.group1 {
+  float: left;
+  float: inline-start;
+  background-color: darksalmon;
+  height: 20vh;
+  block-size: 20vh;
+  width: 250px;
+  inline-size: 250px;
+}
+.group2 {
+  float: left;
+  float: inline-start;
+  background-color: deeppink;
+  height: 40vh;
+  block-size: 40vh;
+  width: 380px;
+  inline-size: 380px;
+}
+.group3 {
+  float: left;
+  float: inline-start;
+  background-color: darkseagreen;
+  height: 60vh;
+  block-size: 60vh;
+  width: 190px;
+  inline-size: 190px;
+}
+
+/* height는 가급적 auto로 설정 */
+
+:is(.header, .visual, .main, .slogan, .footer) {
+  width: 940px;
+  inline-size: 940px;
+  margin-inline: auto;
+}
+
+:is(.header, .visual, .slogan, .footer) {
+  /* 높이 기준 10%만큼 */
+  height: 10vh;
+  block-size: 10vh;
+}
