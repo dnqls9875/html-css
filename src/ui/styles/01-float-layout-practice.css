@@ -1,0 +1,61 @@
+@import "./../../common/best-reset.css";
+
+.header {
+  background-color: lightpink;
+}
+.visual {
+  background-color: lightcyan;
+}
+.slogan {
+  clear: both;
+  background-color: lightgrey;
+}
+.footer {
+  background-color: lightsalmon;
+}
+.main {
+  display: flow-root;
+  background-color: lightskyblue;
+  padding-inline: 15px;
+}
+.group {
+  color: #fff;
+  margin-inline: 15px;
+  height: 20vh;
+  block-size: 20vh;
+}
+.group1 {
+  float: inline-start;
+  background-color: sandybrown;
+  height: 20vh;
+  block-size: 20vh;
+  width: 250px;
+  inline-size: 250px;
+}
+.group2 {
+  float: inline-start;
+  background-color: hotpink;
+  height: 40vh;
+  block-size: 40vh;
+  width: 380px;
+  inline-size: 380px;
+}
+.group3 {
+  float: inline-start;
+  background-color: lightgreen;
+  height: 60vh;
+  block-size: 60vh;
+  width: 190px;
+  inline-size: 190px;
+}
+
+:is(.header, .visual, .main, .slogan, .footer) {
+  width: 940px;
+  inline-size: 940px;
+  margin-inline: auto;
+}
+
+:is(.header, .visual, .sloganm, .footer) {
+  height: 10vh;
+  block-size: 10vh;
+}
