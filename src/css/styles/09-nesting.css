@@ -35,9 +35,12 @@
 /* Sass 방식이기 때문에 CSS에서는 동작하지 않음. */
 .likelion {
   &__list {
+    background-color: lightblue;
   }
   &__item {
+    background-color: lightgreen;
   }
   &__link {
+    background-color: lightpink;
   }
 }
