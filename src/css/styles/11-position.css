@@ -1,0 +1,48 @@
+@import "./../../common/mordern-reset.css";
+
+/* 이 id값 제외 */
+div:not(#awebChromHelper) {
+  font-size: 3rem;
+  /* currentColor : 현재 적용하고 있는 글자색대로 적용 */
+  border: 1px solid currentColor;
+  padding: 10px;
+}
+
+.static {
+  background: yellow;
+}
+
+/* background-attachment와 비슷해보이지만 position:fixed는 다르다 
+이유는 background는 레이아웃에서 음수로 깔리고, position은 양수로 레이아웃 위로 올라온다. */
+.fixed {
+  position: fixed;
+  background: hsla(250 50% 50% / 0.5);
+  inset-block-end: 0;
+  inset-inline-end: 0;
+}
+
+.relative-wrapper {
+  position: relative;
+  /* top */
+  inset-block-start: 50px;
+  /* left */
+  inset-inline-start: 50px;
+}
+.absolute-wrapper {
+  position: absolute;
+}
+.absolute {
+  position: absolute;
+  background: orange;
+  inset-inline-start: 100px;
+  inset-block-start: 0;
+  inline-size: 650px;
+}
+
+.sticky {
+  position: sticky;
+  inset-block-start: 0;
+  background-color: aquamarine;
+  padding: 20px;
+  margin-block: 100px;
+}
