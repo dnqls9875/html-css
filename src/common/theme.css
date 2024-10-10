@@ -1,10 +1,12 @@
 /* 전역 변수 - 이디야 테마 */
 :root {
   /*  색 정의 */
-  --title-text-color: #24388d;
-  --sub-title-text-color: #919bc6;
-
+  --main-text-color: #24388d;
+  --sub-text-color: #919bc6;
   --grayfe: #fefefe;
+  --gray87: #878787;
+  --black: #000;
+  --white: #fff;
 
   /* 여백 정의 */
   --sapcing-sm: 10px;
