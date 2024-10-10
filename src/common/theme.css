@@ -1,0 +1,14 @@
+/* 전역 변수 - 이디야 테마 */
+:root {
+  /*  색 정의 */
+  --title-text-color: #24388d;
+  --sub-title-text-color: #919bc6;
+
+  --grayfe: #fefefe;
+
+  /* 여백 정의 */
+  --sapcing-sm: 10px;
+  --sapcing-base: 12px;
+  --sapcing-md: 16px;
+  --sapcing-lg: 20px;
+}

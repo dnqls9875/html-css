@@ -1,0 +1,24 @@
+@import "./../theme.css";
+
+.thumbnail-card {
+  --size: 60px;
+  --gray87: #878787;
+  --gap: var(--spacing-sm, 10px);
+
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: var(--gap);
+}
+
+.thumbnail-card__caption {
+  strong {
+    font-size: 0.9375rem;
+    font-weight: 400;
+  }
+  p {
+    color: var(--gray87);
+    font-size: 0.8125rem;
+    line-height: 1.5;
+    margin-block-start: 5px;
+  }
+}
