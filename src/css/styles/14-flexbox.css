@@ -1,0 +1,64 @@
+@import "./../../common/mini-reset.css";
+@import "./../../common/base.css";
+
+body,
+h1 {
+  margin: 50px;
+}
+
+h2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border: 1px solid currentColor;
+  inline-size: 300px;
+  block-size: 100px;
+}
+
+.flex-basic {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: start;
+  align-content: start;
+  inline-size: 1000px;
+  block-size: 600px;
+  background-color: yellow;
+  margin-block: 20px;
+  /* content 크기 test 할때 활용하는 방법  box-sizing  : content-box 하지 않을 시 사용 */
+  box-shadow: 1px 1px 0 0 currentColor, -1px -1px 0 0 currentColor;
+}
+
+.flex-item {
+  background-color: pink;
+  /* inline-size: 500px; */
+  block-size: 200px;
+
+  /* flex-basis는 flex-item의 기본 크기 */
+  flex-basis: 0;
+}
+
+.flex-item:nth-child(odd) {
+  order: 1;
+}
+
+.flex-item1 {
+  flex-shrink: 1;
+  flex-grow: 1;
+  background-color: lightgreen;
+}
+.flex-item2 {
+  flex-shrink: 1;
+  flex-grow: 1;
+  background-color: aqua;
+}
+.flex-item3 {
+  flex-shrink: 1;
+  flex-grow: 1;
+  background-color: sandybrown;
+}
+.flex-item4 {
+  flex-shrink: 1;
+  flex-grow: 1;
+}
