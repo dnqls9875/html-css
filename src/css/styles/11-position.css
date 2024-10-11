@@ -8,6 +8,29 @@ div:not(#awebChromHelper) {
   padding: 10px;
 }
 
+/* 요소 박스 위치 지정 (percentage value) */
+
+/* content-box : margin + border + padding + width */
+/* border-box: margin + width(border + padding) */
+
+/* button : 리셋시키지 않아도 기본이 border-box */
+
+.percentage-value {
+  border: 1px solid currentColor;
+  font-size: 1rem !important;
+  padding: 10px !important;
+  margin: 1em !important;
+  inline-size: 200px;
+
+  p {
+    padding: 20%;
+    border: inherit;
+    position: relative;
+    inset-inline-start: 50%;
+    background-color: tomato;
+  }
+}
+
 .static {
   background: yellow;
 }
