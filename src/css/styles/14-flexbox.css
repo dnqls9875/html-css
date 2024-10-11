@@ -35,7 +35,7 @@ h2 {
   /* inline-size: 500px; */
   block-size: 200px;
 
-  /* flex-basis는 flex-item의 기본 크기 */
+  /* flex-basis는 flex-item의 기본 크기 정의하지 않으면 기본값 auto */
   flex-basis: 0;
 }
 
