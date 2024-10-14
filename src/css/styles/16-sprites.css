@@ -1,0 +1,50 @@
+@import "./../../common/mini-reset.css";
+@import "./../../common/base.css";
+
+body {
+  margin: 50px;
+}
+
+h1,
+h2 {
+  margin-block-end: 20px;
+}
+
+.sns-list {
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 1rem;
+  margin-block-start: 1.25rem;
+  background-color: yellow;
+
+  .sns {
+    display: block;
+    inline-size: 1.875rem;
+    aspect-ratio: 1 / 1;
+    background-color: pink;
+    background: url(./../../assets/sprite/sns.png);
+  }
+
+  .facebook {
+    background-position: 0 0;
+  }
+  .instagram {
+    background-position: 50% 0;
+  }
+  .youtube {
+    background-position: 100% 0;
+  }
+}
+
+.icon-list {
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 1rem;
+
+  a {
+    display: block;
+    inline-size: 1.5rem;
+    aspect-ratio: 1/1;
+    color: rgb(62, 197, 62);
+  }
+}
