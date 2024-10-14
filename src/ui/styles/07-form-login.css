@@ -7,6 +7,7 @@
   --gray: #999;
   --green: #03cf5d;
   --grayda: #dadada;
+  --black: #121212;
 
   /* 아이콘 크기 (박스) */
   --size-sm: 0.75rem;
@@ -27,8 +28,9 @@
   box-sizing: border-box;
 }
 
+/* body 기본값 */
 body {
-  margin: 0;
+  color: var(--black);
 }
 
 /* 로고 컴포넌트 */
@@ -110,6 +112,11 @@ body {
     &:user-invalid + .input__error-message span {
       visibility: visible;
     }
+
+    &:focus {
+      border: 1px solid var(--green);
+      background-color: #e9f0fd;
+    }
   }
 
   .input__error-message {
@@ -123,4 +130,46 @@ body {
       visibility: hidden;
     }
   }
+}
+
+/* 스위치 컴포넌트 (checkbox) */
+.switch {
+  position: relative;
+  font-size: 0.875rem;
+  font-weight: 700;
+
+  .switch__input {
+    position: absolute;
+    inset-inline-start: 0;
+    inset-block-start: 0;
+    margin: 0;
+    inline-size: 2em;
+    block-size: 1rem;
+    appearance: none;
+  }
+  .switch__label {
+    display: block;
+    color: #999;
+    inline-size: 2em;
+    text-align: end;
+
+    &::after {
+      content: "OFF";
+    }
+  }
+  .switch__input:checked + label {
+    &::after {
+      content: "ON";
+      color: var(--green);
+    }
+  }
+}
+
+/* 버튼 컴포넌트 */
+.button--primary {
+  background-color: var(--green);
+  color: var(--white);
+  block-size: 3.5rem;
+  padding: 1rem;
+  border: 0;
 }
