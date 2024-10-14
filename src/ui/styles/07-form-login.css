@@ -6,6 +6,25 @@
   --white: #fff;
   --gray: #999;
   --green: #03cf5d;
+  --grayda: #dadada;
+
+  /* 아이콘 크기 (박스) */
+  --size-sm: 0.75rem;
+  --size-base: 1rem;
+  --size-md: 1.25rem;
+  --size-lg: 1.5rem;
+
+  /* 글자 크기 */
+  --text-sm: 0.75rem;
+  --text-base: 0.875rem;
+  --text-md: 1rem;
+  --text-lg: 1.125rem;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
 body {
@@ -34,7 +53,18 @@ body {
 
 /* 체크박스 컴포넌트 (checkbox) */
 .checkbox {
-  background-color: salmon;
+  position: relative;
+
+  .checkbox__input {
+    --icon-size: var(--size-lg, 1.5rem);
+    position: absolute;
+    inset-inline-start: 0;
+    inset-block-start: 0;
+    margin: 0;
+    inline-size: var(--icon-size);
+    aspect-ratio: 1 / 1;
+    appearance: none;
+  }
 
   .checkbox__label {
     display: flex;
@@ -59,5 +89,38 @@ body {
 
   .checkbox__input:checked + .checkbox__label .checkbox--mark {
     fill: var(--white, #fff);
+  }
+}
+
+/* 입력 서식 컴포넌트 (input) 숨김 레이블 유형 */
+.input {
+  --border-color: var(--grayda, #dadada);
+  --text-color: var(--dark-gray, #333);
+  --text-size: var(--text-base, 0.875rem);
+
+  font-size: var(--text-size);
+  color: var(--dark-gray);
+
+  .input__input {
+    border: 1px solid var(--border-color);
+    inline-size: 100%;
+    block-size: 3rem;
+    padding: 0.875rem;
+
+    &:user-invalid + .input__error-message span {
+      visibility: visible;
+    }
+  }
+
+  .input__error-message {
+    --error-message-color: #ff1414;
+
+    color: var(--error-message-color);
+    font-size: var(--text-sm);
+    line-height: 1.125rem;
+    margin: 0.5rem 0 0 0;
+    span {
+      visibility: hidden;
+    }
   }
 }
