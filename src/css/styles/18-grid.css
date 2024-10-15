@@ -1,0 +1,136 @@
+@import "./../../common/base.css";
+
+body {
+  /* background: url(./../../assets/images/grid.png) repeat-y 50% 0; */
+  margin: 50px;
+}
+
+/* % 세트로 사용된다. */
+/* ^ grid-auto-flow: column;
+^ grid-auto-columns: minmax(200px, 1fr); */
+
+/* & grid-auto-flow: column;는 모든 column값을 동일한 크기로 만들 때 사용 */
+
+/* ! CSS 함수 */
+/* ? minmax() */
+/* ? repeat() */
+
+/* 그리드 영역 이름 */
+.grid-box {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(200px, 1fr));
+  grid-template-rows: auto;
+  grid-template-areas:
+    "item1 item1 item1 item2 item2"
+    "item3 item3 item4 item4 item4"
+    "item5 item5 item5 item5 item5";
+  gap: 20px;
+  padding-inline: 24px;
+  border: 1px solid green;
+  min-inline-size: 1122px;
+
+  .grid-item {
+    padding: 0.5rem;
+  }
+
+  .grid-item1 {
+    background-color: lemonchiffon;
+    grid-area: item1;
+  }
+  .grid-item2 {
+    background-color: lightsalmon;
+    grid-area: item2;
+  }
+  .grid-item3 {
+    background-color: lightblue;
+    grid-area: item3;
+  }
+  .grid-item4 {
+    background-color: lightgreen;
+    grid-area: item4;
+  }
+  .grid-item5 {
+    background-color: lightpink;
+    grid-area: item5;
+  }
+}
+
+/* 그리드 라인 이름 */
+.grid-wrapper {
+  display: grid;
+  grid-template-columns: [techit-start] 1fr [likelion-start] 1fr [euid-start] 1fr 1fr [likelion-end euid-end] 1fr [techit-end];
+  grid-template-rows: repeat(5, 50px);
+  gap: 20px;
+  padding-inline: 24px;
+  border: 1px solid green;
+  min-inline-size: 1122px;
+
+  .grid-item {
+    padding: 0.5rem;
+  }
+
+  .grid-item1 {
+    background-color: lemonchiffon;
+    grid-column: techit;
+  }
+  .grid-item2 {
+    background-color: lightsalmon;
+    grid-column: likelion;
+  }
+  .grid-item3 {
+    background-color: lightblue;
+    grid-column: euid;
+  }
+  .grid-item4 {
+    background-color: lightgreen;
+  }
+  .grid-item5 {
+    background-color: lightpink;
+  }
+}
+
+/* 그리드 넘버 이름 */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(200px, 1fr));
+  gap: 20px;
+  padding-inline: 24px;
+  grid-template-rows: repeat(5, 50px);
+  border: 1px solid green;
+  min-inline-size: 1122px;
+  /* grid-auto-flow: column;
+  grid-auto-columns: minmax(200px, 1fr); */
+
+  .grid-item {
+    padding: 0.5rem;
+  }
+
+  .grid-item1 {
+    background-color: lemonchiffon;
+    grid-row-start: 1;
+    grid-column-start: 1;
+    grid-row-end: 4;
+    grid-column-end: 2;
+  }
+  .grid-item2 {
+    background-color: lightsalmon;
+    grid-row: 3 / 5;
+    grid-column: 4 / 6;
+  }
+  .grid-item3 {
+    background-color: lightblue;
+    /* 스타트는 생략 가능 */
+    grid-row: span 2;
+    grid-column: span 2;
+  }
+  .grid-item4 {
+    background-color: lightgreen;
+    grid-row: 5;
+    grid-column: 1 / -1;
+  }
+  .grid-item5 {
+    background-color: lightpink;
+    grid-area: 3 / 2 / 5 / 4;
+    /* grid-area: 3 / span 2 / 5 / span 2; 위와 같음 */
+  }
+}
