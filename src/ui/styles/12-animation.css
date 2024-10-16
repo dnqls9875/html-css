@@ -1,0 +1,89 @@
+@import "./../../common/mordern-reset.css";
+@import "./../../common/base.css";
+
+h1,
+h2,
+button {
+  margin-block: 1rem;
+}
+
+.button--burger {
+  /* display: flex;
+  flex-flow: column wrap;
+  justify-content: space-between; */
+
+  overflow: hidden;
+  position: relative;
+  inline-size: 24px;
+  aspect-ratio: 1 / 1;
+  border: 0;
+  padding: 0;
+  background-color: transparent;
+
+  .burger-bar {
+    position: absolute;
+    inset-inline-start: 0;
+    inline-size: 100%;
+    block-size: 20%;
+    background-color: currentColor;
+    border-radius: 100px;
+    transition: all 0.2s;
+
+    /* inline-size: 100%;
+    block-size: 20px;
+    background-color: var(--white); */
+  }
+
+  .burger-bar-top {
+    inset-block-start: 0;
+  }
+  .burger-bar-middle {
+    inset-block-start: 50%;
+    translate: 0 -50%;
+    /* transform: translateY(-50%); */
+  }
+  .burger-bar-bottom {
+    inset-block-start: 100%;
+    translate: 0 -100%;
+    /* transform: translateY(-100%); */
+  }
+
+  &:hover {
+    .burger-bar-top {
+      inset-block-start: 50%;
+      translate: 0 -50%;
+      rotate: -45deg;
+      /* transform: translateY(-50%) rotate(45deg); */
+    }
+    .burger-bar-middle {
+      /* transform: translate(-120%, -50%); */
+      translate: -120% -50%;
+    }
+    .burger-bar-bottom {
+      inset-block-start: 50%;
+      translate: 0 -50%;
+      rotate: 45deg;
+      /* transform: translateY(-50%) rotate(-45deg); */
+    }
+  }
+}
+
+/* svg 애니메이션 */
+.loading-spinner {
+  inline-size: 48px;
+  aspect-ratio: 1 / 1;
+  color: var(--red);
+
+  svg {
+    animation: spinner 1s infinite steps(10);
+  }
+}
+
+@keyframes spinner {
+  0% {
+    rotate: 0;
+  }
+  100% {
+    rotate: 360deg;
+  }
+}
