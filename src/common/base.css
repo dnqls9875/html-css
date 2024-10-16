@@ -24,4 +24,5 @@ textarea {
 /* 기본 스타일 */
 body {
   font-family: "Pretendard Variable", Pretendard, sans-serif;
+  margin: 3rem;
 }
