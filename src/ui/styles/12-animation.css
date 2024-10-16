@@ -7,11 +7,89 @@ button {
   margin-block: 1rem;
 }
 
-.button--burger {
-  /* display: flex;
+.button--burger-flex {
+  overflow: hidden;
+  display: flex;
   flex-flow: column wrap;
-  justify-content: space-between; */
+  justify-content: space-between;
+  inline-size: 25px;
+  aspect-ratio: 1 / 1;
+  background-color: transparent;
+  border: 0;
+  padding: 0;
 
+  .burger-bar {
+    background-color: currentColor;
+    inline-size: 100%;
+    block-size: 20%;
+    border-radius: 100px;
+    transition: all 0.2s;
+  }
+
+  &:hover {
+    justify-content: center;
+
+    .burger-bar-top {
+      rotate: -45deg;
+      translate: 0 100%;
+    }
+    .burger-bar-middle {
+      translate: -120% 0;
+    }
+    .burger-bar-bottom {
+      rotate: 45deg;
+      translate: 0 -100%;
+    }
+  }
+}
+
+.button--burger-grid {
+  --size: 24px;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: var(--size);
+  grid-template-rows: var(--size);
+  inline-size: var(--size);
+  aspect-ratio: 1 / 1;
+  border: 0;
+  padding: 0;
+
+  .burger-bar {
+    background-color: currentColor;
+    grid-area: 1 / 1 / 2 / 2;
+    inline-size: 100%;
+    block-size: 20%;
+    border-radius: 100px;
+    transition: all 0.2s;
+  }
+
+  .burger-bar-top {
+    align-self: start;
+  }
+  .burger-bar-middle {
+    align-self: center;
+  }
+  .burger-bar-bottom {
+    align-self: end;
+  }
+
+  &:hover {
+    .burger-bar {
+      align-self: center;
+    }
+    .burger-bar-top {
+      rotate: -45deg;
+    }
+    .burger-bar-middle {
+      translate: 120% 0;
+    }
+    .burger-bar-bottom {
+      rotate: 45deg;
+    }
+  }
+}
+
+.button--burger {
   overflow: hidden;
   position: relative;
   inline-size: 24px;
@@ -28,10 +106,6 @@ button {
     background-color: currentColor;
     border-radius: 100px;
     transition: all 0.2s;
-
-    /* inline-size: 100%;
-    block-size: 20px;
-    background-color: var(--white); */
   }
 
   .burger-bar-top {
