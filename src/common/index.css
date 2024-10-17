@@ -7,6 +7,11 @@ body {
   margin: 4rem;
 }
 
+h1 {
+  padding-block-end: 10px;
+  border-block-end: 2px solid lightgray;
+}
+
 h2 {
   padding-block-end: 10px;
 }
