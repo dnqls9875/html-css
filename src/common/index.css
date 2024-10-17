@@ -2,25 +2,42 @@
 @import "./base.css";
 
 body {
+  font-family: "Pretendard Variable", Pretendard, sans-serif;
   background-color: lightgoldenrodyellow;
   margin: 4rem;
 }
 
+h2 {
+  padding-block-end: 10px;
+}
+
 .container {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-
-  @media (min-width: 768px) {
-    grid-columns: 2;
-  }
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 20px;
 }
 
 .content {
-  border: 1px solid var(--red);
+  padding: 2rem;
 
   ul {
+    display: flex;
+    flex-flow: column wrap;
+    gap: 15px;
+    margin-block-start: 20px;
+    border-inline-end: 1px solid currentColor;
     > li {
       > a {
+        text-decoration: none;
+        color: inherit;
+        font-weight: 600;
+        white-space: nowrap;
+        transition: all linear 0.5s;
+
+        &:hover {
+          background-color: lightseagreen;
+          color: lightyellow;
+        }
       }
     }
   }
