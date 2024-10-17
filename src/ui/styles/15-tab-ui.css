@@ -1,2 +1,91 @@
 @import "./../../common/mordern-reset.css";
 @import "./../../common/base.css";
+
+/* Tab UI */
+.tab-container {
+  --main-text-color: #181818;
+
+  display: grid;
+  position: relative;
+  gap: 1rem;
+  margin-block: 1rem;
+  min-inline-size: 280px;
+}
+
+.tab-list {
+  --tab-text-color: #525252;
+  --tab-bg-color: #ccc;
+  --tab-border-color: #a3a3a3;
+  --tab-active-color: #ed552f;
+
+  display: flex;
+  flex-flow: row nowrap;
+  .tab {
+    color: var(--tab-text-color);
+    font-size: 0.875rem;
+    font-weight: 400;
+    line-height: 1.5;
+    background-color: var(--tab-bg-color);
+    border: 1px solid var(--tab-border-color);
+    border-radius: 0.3125rem 0.3125rem 0 0;
+    padding: 0.5rem 1rem;
+
+    &[aria-selected="true"] {
+      background-color: transparent;
+      color: var(--tab-active-color);
+      border-color: var(--tab-active-color);
+      border-bottom: 0;
+    }
+  }
+}
+
+.tab-panel {
+  --plus-icon-color: #447231;
+  ul {
+    display: grid;
+    gap: 0.75rem;
+
+    > li {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      a {
+        flex: 1;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        text-decoration: none;
+        color: var(--main-text-color);
+        inline-size: 17.3125rem;
+        line-height: 1.25rem;
+
+        span {
+          display: inline-block;
+          margin-inline-end: 0.25rem;
+          inline-size: 1.25rem;
+          aspect-ratio: 1 / 1;
+        }
+      }
+
+      time {
+        flex: 0 0 auto;
+      }
+    }
+  }
+  .tab-panel__link {
+    position: absolute;
+    inset-block-start: 0;
+    inset-inline-end: 0;
+    color: var(--main-text-color);
+    text-decoration: none;
+  }
+  .fa-plus {
+    color: var(--plus-icon-color);
+    &::before {
+      padding-inline-end: 0.25rem;
+    }
+  }
+}
+
+.tab-container-grid {
+}

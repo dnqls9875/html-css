@@ -49,8 +49,15 @@
             <time datetime="2024-10-17T15:30:15">2024.10.17</time>
           </li>
         </ul>
-        <a href="/"><span class="fas fa-plus" aria-hidden="true" title="공지사항"></span>더보기</a>
+        <a href="/" class="tab-panel__link"><span class="fas fa-plus" aria-hidden="true" title="공지사항"></span>더보기</a>
       </div>
+    </div>
+    <div class="tab-container-grid">
+      <div class="tab-list" role="tablist">
+        <button type="button" class="tab is--active" role="tab" id="tab-1" aria-selected="true" aria-controls="tab-panel-1">공지사항</button>
+        <button type="button" class="tab" role="tab" id="tab-2" aria-selected="false" aria-controls="tab-panel-2">자료실</button>
+      </div>
+
       <div class="tab-panel tab-panel-2" role="tabpanel" id="tab-panel-2" aria-labelledby="tab-2">
         <ul>
           <li>
@@ -74,7 +81,7 @@
             <time datetime="2024-10-17T15:30:15">2024.10.17</time>
           </li>
         </ul>
-        <a href="/"><span class="fas fa-plus" aria-hidden="true" title="자료실"></span>더보기</a>
+        <a href="/" class="tab-panel__link"><span class="fas fa-plus" aria-hidden="true" title="자료실"></span>더보기</a>
       </div>
     </div>
   </body>
